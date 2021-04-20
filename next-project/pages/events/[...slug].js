@@ -30,7 +30,7 @@ const FilteredEventsPage = () => {
     numMonth < 1
   ) {
     return (
-      <>
+      <Fragment>
         <ErrorAlert>
           {" "}
           <p className="center">Invalid Filter. Please Adjust your values</p>
@@ -38,7 +38,7 @@ const FilteredEventsPage = () => {
         <Button className="center" link="/events">
           Show All Events
         </Button>
-      </>
+      </Fragment>
     );
   }
 
@@ -47,7 +47,10 @@ const FilteredEventsPage = () => {
   if (!filteredEvents || filteredEvents.length === 0) {
     return (
       <div>
-      <ErrorAlert>  <p>No events found for the chosen filter!</p></ErrorAlert>
+        <ErrorAlert>
+          {" "}
+          <p>No events found for the chosen filter!</p>
+        </ErrorAlert>
       </div>
     );
   }

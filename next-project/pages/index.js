@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Fragment } from "react";
 import { getFeaturedEvents } from "../dummy-data";
 import EventList from "../components/events/EventList";

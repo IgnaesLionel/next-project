@@ -7,6 +7,11 @@ const EventsSearch = (props) => {
   const yearInputRef = useRef();
   const monthInputRef = useRef();
 
+  function findEventsHandler(year, month) {
+    const fullpath = `/events/${year}/${month}`;
+    router.push(fullpath);
+  }
+
   function submitHandler(event) {
     event.preventDefault();
     const selectedYear = yearInputRef.current.value;
